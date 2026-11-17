@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 8 - Emprego Pleno, Cursos, Inovação e Impacto</title>
+    
+    <!-- Fonte Moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <span class="ods-badge">ODS 8</span>
+                <span class="logo-text">Agenda 2030</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#objetivos">Objetivos</a>
+                <a href="#quiz">Descubra seu Perfil</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#reportagens">Reportagens</a>
+                <a href="#faq">FAQ</a>
+                <a href="#participar" class="btn btn-primary btn-sm">Participar</a>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i data-lucide="globe"></i>
+                <span>Objetivos de Desenvolvimento Sustentável — ONU</span>
+            </div>
+            <h1>Emprego Pleno e Produtivo, Empreendedorismo e Inovação</h1>
+            <p class="hero-subtitle">
+                Conectando formação acadêmica, capacitação profissional e tecnologia para gerar trabalho decente, inclusão social e renda até 2030.
+            </p>
+            <div class="hero-actions">
+                <a href="#quiz" class="btn btn-primary">
+                    <span>Faça o Quiz de Perfil</span>
+                    <i data-lucide="compass"></i>
+                </a>
+                <a href="#cursos" class="btn btn-outline">Explorar Cursos</a>
+            </div>
+
+            <!-- Barra de Impacto Dinâmica -->
+            <div class="hero-stats" id="statsSection">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="6">0</span>
+                    <span class="stat-label">Grandes Áreas Integradas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Foco em Inclusão (Jovens e PcD)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="2030">0</span>
+                    <span class="stat-label">Meta Global de Trabalho Decente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Objetivos -->
+    <section id="objetivos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Propósito & Metas</span>
+                <h2>Nossos Objetivos para 2030</h2>
+                <p>Diretrizes fundamentais para transformar o mercado de trabalho e impulsionar o desenvolvimento social.</p>
+            </div>
+
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <div class="icon-box primary-soft">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Acesso Universal e Inclusivo</h3>
+                    <p>Garantir que todas as pessoas, incluindo <strong>jovens e pessoas com deficiência</strong>, tenham acesso a empregos decentes e produtivos até 2030.</p>
+                </div>
+
+                <div class="objective-card">
+                    <div class="icon-box primary-soft">
+                        <i data-lucide="rocket"></i>
+                    </div>
+                    <h3>Fomento à Inovação e Negócios</h3>
+                    <p>Promover políticas que apoiem atividades produtivas, a geração de empregos decentes, o <strong>empreendedorismo, a criatividade e a inovação</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: CALCULADORA / QUIZ DE PERFIL ODS 8 -->
+    <section id="quiz" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interativo</span>
+                <h2>Descubra seu Perfil de Inovação</h2>
+                <p>Responda a 3 perguntas rápidas e descubra qual programa da ODS 8 mais combina com você.</p>
+            </div>
+
+            <div class="quiz-container" id="quizContainer">
+                <!-- Passo 1 -->
+                <div class="quiz-step active" id="step-1">
+                    <span class="quiz-counter">Pergunta 1 de 3</span>
+                    <h3>O que mais te motiva a gerar impacto na sociedade?</h3>
+                    <div class="quiz-options">
+                        <label class="quiz-option"><input type="radio" name="p1" value="tecnologia"> Desenvolver tecnologias, softwares ou produtos inovadores.</label>
+                        <label class="quiz-option"><input type="radio" name="p1" value="vulneraveis"> Promover inclusão social, direitos e apoiar grupos vulneráveis.</label>
+                        <label class="quiz-option"><input type="radio" name="p1" value="jovens"> Ensinar, mentorar e criar oficinas para jovens e adolescentes.</label>
+                        <label class="quiz-option"><input type="radio" name="p1" value="bioagro"> Trabalhar com bioeconomia, sustentabilidade e campo.</label>
+                    </div>
+                    <button class="btn btn-primary" onclick="avancarQuiz(2)">Próxima Pergunta <i data-lucide="arrow-right"></i></button>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="quiz-step hidden" id="step-2">
+                    <span class="quiz-counter">Pergunta 2 de 3</span>
+                    <h3>Qual é a sua principal área de afinidade ou formação?</h3>
+                    <div class="quiz-options">
+                        <label class="quiz-option"><input type="radio" name="p2" value="exatas"> Engenharias, Exatas ou Tecnologia.</label>
+                        <label class="quiz-option"><input type="radio" name="p2" value="humanas"> Ciências Humanas, Sociais ou Licenciaturas.</label>
+                        <label class="quiz-option"><input type="radio" name="p2" value="saude"> Ciências da Saúde ou Bem-estar.</label>
+                        <label class="quiz-option"><input type="radio" name="p2" value="agro"> Ciências Agrárias ou Biológicas.</label>
+                    </div>
+                    <button class="btn btn-primary" onclick="avancarQuiz(3)">Ver Meu Resultado <i data-lucide="sparkles"></i></button>
+                </div>
+
+                <!-- Passo 3 (Resultado Dinâmico) -->
+                <div class="quiz-step hidden" id="step-3">
+                    <div class="quiz-result-box" id="quizResultContent">
+                        <!-- Preenchido via JS -->
+                    </div>
+                    <button class="btn btn-outline" onclick="reiniciarQuiz()" style="color:var(--secondary); border-color:var(--border-color); margin-top:16px;">Refazer Teste</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Áreas Contempladas -->
+    <section id="areas" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Multidisciplinaridade</span>
+                <h2>Áreas do Conhecimento Contempladas</h2>
+                <p>Clique em uma área abaixo para filtrar os cursos e oficinas relacionados a ela.</p>
+            </div>
+
+            <div class="areas-grid">
+                <div class="area-card clickable-area" data-filter="saude">
+                    <div class="area-icon"><i data-lucide="heart-pulse"></i></div>
+                    <h3>Ciências da Saúde</h3>
+                    <p>Tecnologias assistivas, gestão em saúde e bem-estar ocupacional.</p>
+                </div>
+
+                <div class="area-card clickable-area" data-filter="humanas">
+                    <div class="area-icon"><i data-lucide="book-open"></i></div>
+                    <h3>Ciências Humanas e Licenciaturas</h3>
+                    <p>Educação empreendedora, inclusão social e formação cidadã.</p>
+                </div>
+
+                <div class="area-card clickable-area" data-filter="biologicas">
+                    <div class="area-icon"><i data-lucide="dna"></i></div>
+                    <h3>Ciências Biológicas</h3>
+                    <p>Biotecnologia, bioeconomia e soluções sustentáveis.</p>
+                </div>
+
+                <div class="area-card clickable-area" data-filter="agrarias">
+                    <div class="area-icon"><i data-lucide="sprout"></i></div>
+                    <h3>Ciências Agrárias</h3>
+                    <p>Agronegócio sustentável, agricultura familiar e geração de renda no campo.</p>
+                </div>
+
+                <div class="area-card clickable-area" data-filter="sociais">
+                    <div class="area-icon"><i data-lucide="briefcase"></i></div>
+                    <h3>Ciências Sociais Aplicadas</h3>
+                    <p>Gestão de negócios, economia criativa e impacto social.</p>
+                </div>
+
+                <div class="area-card clickable-area" data-filter="exatas">
+                    <div class="area-icon"><i data-lucide="cpu"></i></div>
+                    <h3>Engenharias e Exatas</h3>
+                    <p>Desenvolvimento de produtos tecnológicos, software e inovação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vitrine Dinâmica de Cursos e Oficinas -->
+    <section id="cursos" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Capacitação na Prática</span>
+                <h2>Cursos e Programas em Destaque</h2>
+                <p>Iniciativas inspiradas nas metas da ODS 8 para capacitar jovens, grupos vulneráveis e empreendedores.</p>
+            </div>
+
+            <!-- Botões de Filtro Dinâmico -->
+            <div class="filter-bar" id="courseFilters">
+                <button class="filter-btn active" data-category="todos">Todos os Programas</button>
+                <button class="filter-btn" data-category="jovens">Jovens e Adolescentes</button>
+                <button class="filter-btn" data-category="vulneraveis">Inclusão Produtiva</button>
+                <button class="filter-btn" data-category="tecnologia">Tecnologia e Inovação</button>
+                <button class="filter-btn" data-category="bioagro">Bio & Agro Sustentável</button>
+            </div>
+
+            <!-- Grid onde o JavaScript vai renderizar os cursos -->
+            <div class="courses-grid" id="coursesContainer"></div>
+        </div>
+    </section>
+
+    <!-- Reportagens e Casos de Impacto -->
+    <section id="reportagens" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Jornalismo & Impacto</span>
+                <h2>Reportagens e Histórias Reais</h2>
+                <p>Acompanhe iniciativas, políticas públicas e projetos que já estão transformando vidas através da ODS 8.</p>
+            </div>
+
+            <div class="news-grid" id="newsContainer"></div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: FAQ (PERGUNTAS FREQUENTES EM ACORDEÃO) -->
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tire Suas Dúvidas</span>
+                <h2>Perguntas Frequentes (FAQ)</h2>
+                <p>Tudo o que você precisa saber sobre os cursos, editais e participação na iniciativa ODS 8.</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Os cursos e oficinas oferecidos são totalmente gratuitos?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Todos os programas, oficinas de capacitação e mentorias vinculados à iniciativa ODS 8 são 100% gratuitos, financiados por editais públicos e parcerias institucionais voltadas para o desenvolvimento sustentável.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Há emissão de certificado ao concluir as capacitações?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Ao completar a carga horária mínima de frequência e as atividades práticas propostas, você receberá um certificado oficial de extensão/capacitação com validação institucional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quem pode participar dos programas de inovação e empreendedorismo?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os programas são abertos a estudantes universitários, professores, pesquisadores, pequenos empreendedores, líderes comunitários, jovens (a partir de 15 anos) e pessoas com deficiência interessadas em inclusão produtiva.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como posso submeter um projeto ou solução tecnológica inovadora?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Basta preencher o formulário de inscrição localizado ao final desta página, selecionando a opção correspondente à sua área de interesse. Nossa equipe de mentores entrará em contato para orientar o alinhamento do seu projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CTA / Formulário de Inscrição -->
+    <section id="participar" class="section">
+        <div class="container">
+            <div class="cta-box">
+                <div class="cta-info">
+                    <span class="badge-light">Faça Parte da Mudança</span>
+                    <h2>Inscreva-se em um curso ou submeta seu projeto</h2>
+                    <p>Selecione sua área de atuação e a iniciativa desejada. Nossa equipe entrará em contato com os próximos passos.</p>
+                    <ul class="cta-benefits">
+                        <li><i data-lucide="check-circle-2"></i> Oficinas gratuitas e certificadas</li>
+                        <li><i data-lucide="check-circle-2"></i> Mentoria para projetos de inovação social</li>
+                        <li><i data-lucide="check-circle-2"></i> Acessibilidade garantida para PcD</li>
+                    </ul>
+                </div>
+
+                <form class="cta-form" id="odsForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Área de Atuação / Interesse *</label>
+                        <select id="area" required>
+                            <option value="" disabled selected>Selecione uma área...</option>
+                            <option value="Ciências da Saúde">Ciências da Saúde</option>
+                            <option value="Ciências Humanas e Licenciaturas">Ciências Humanas e Licenciaturas</option>
+                            <option value="Ciências Biológicas">Ciências Biológicas</option>
+                            <option value="Ciências Agrárias">Ciências Agrárias</option>
+                            <option value="Ciências Sociais Aplicadas">Ciências Sociais Aplicadas</option>
+                            <option value="Engenharias e Exatas">Engenharias e Exatas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="programa">Curso ou Iniciativa de Interesse *</label>
+                        <input type="text" id="programa" placeholder="Ex: Oficina Jovem Empreendedor ou Projeto Tech" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span>Confirmar Inscrição</span>
+                        <i data-lucide="send"></i>
+                    </button>
+
+                    <div id="formFeedback" class="feedback-message hidden"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="ods-badge">ODS 8</span>
+                    <span class="logo-text text-white">Trabalho Decente e Crescimento Econômico</span>
+                </div>
+                <p>Compromisso global com o emprego pleno, produtivo e o incentivo ao empreendedorismo inovador até 2030.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <a href="#objetivos">Objetivos</a>
+                <a href="#quiz">Quiz de Perfil</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Iniciativa ODS 8 — Agenda 2030. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL INTERATIVO -->
+    <div class="modal-overlay hidden" id="dynamicModal">
+        <div class="modal-card">
+            <button class="modal-close" id="closeModalBtn" aria-label="Fechar">
+                <i data-lucide="x"></i>
+            </button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
